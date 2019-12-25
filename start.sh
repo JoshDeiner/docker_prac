@@ -1,2 +1,3 @@
-docker build -t jdeiner/flask .
-docker run -p 8080:5000 jdeiner/flask
+docker build -t jeiner/flask .
+docker run -d -p 5000:5000 jdeiner/flask
+
