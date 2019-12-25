@@ -19,13 +19,14 @@ connex_app.add_api("swagger.yml")
 # Create a URL route in our application for "/"
 @connex_app.route("/")
 def home():
+    # return redirect(url_for("/api./api_swagger_ui_index"))
     """
     This function just responds to the browser URL
     localhost:5000/
 
     :return:        the rendered template "home.html"
     """
-    return redirect(url_for("/api./api_swagger_ui_index"))
+
     return render_template("home.html")
 
 
@@ -59,4 +60,4 @@ def notes(person_id, note_id=""):
 
 
 if __name__ == "__main__":
-    connex_app.run(debug=True, port=5001)
+    connex_app.run(debug=True, port=5000)
