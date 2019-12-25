@@ -3,7 +3,7 @@ Main module of the server file
 """
 
 # 3rd party moudles
-from flask import render_template
+from flask import render_template, url_for, redirect
 
 # Local modules
 import config
@@ -25,6 +25,7 @@ def home():
 
     :return:        the rendered template "home.html"
     """
+    return redirect(url_for("/api./api_swagger_ui_index"))
     return render_template("home.html")
 
 
@@ -38,6 +39,7 @@ def people(person_id=""):
 
     :return:        the rendered template "people.html"
     """
+
     return render_template("people.html", person_id=person_id)
 
 
@@ -57,4 +59,4 @@ def notes(person_id, note_id=""):
 
 
 if __name__ == "__main__":
-    connex_app.run(debug=True)
+    connex_app.run(debug=True, port=5001)
