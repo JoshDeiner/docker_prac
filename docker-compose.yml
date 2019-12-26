@@ -8,5 +8,3 @@ services:
       - .:/flask-connexion-rest-part-3
     environment:
       FLASK_ENV: development
-  redis:
-    image: "redis:alpine"

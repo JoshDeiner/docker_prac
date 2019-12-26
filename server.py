@@ -27,7 +27,7 @@ def home():
     :return:        the rendered template "home.html"
     """
 
-   # return render_template("home.html")
+    #return render_template("home.html")
 
 
 # Create a URL route in our application for "/people"
