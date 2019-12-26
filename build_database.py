@@ -39,14 +39,14 @@ PEOPLE = [
 ]
 
 # Delete database file if it exists currently
-if os.path.exists("people.db"):
-    os.remove("people.db")
+# if os.path.exists("people.db"):
+#     os.remove("people.db")
 
 # Create the database
 db.create_all()
 
 # iterate over the PEOPLE structure and populate the database
-for person in PEOPLE:
+for person in PEOPLE:d
     p = Person(lname=person.get("lname"), fname=person.get("fname"))
 
     # Add the notes for the person
